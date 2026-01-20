@@ -33,28 +33,7 @@ The project is built entirely using Python's standard libraries:
 
     random: For shuffling game words and selecting trivia.
 
-Core Logic Snippets
-
-Broadcasting Messages:
-Python
-
-def sendmessage(message, sender):
-    for client in clients:
-        if client != sender:
-            try:
-                client.send(message.encode())
-            except:
-                clients.remove(client) # Handles graceful disconnection [cite: 100-107]
-
-Word Jumble Logic:
-Python
-
-def jumble():
-    original = random.choice(words)
-    lst = list(original)
-    random.shuffle(lst)
-    jumbled = "".join(lst)
-    return original, jumbled [cite: 91-96]
+Core Logic Snippets(Available in the document)
 
 Setup and Testing
 
@@ -66,4 +45,4 @@ Setup and Testing
 
 Documentation
 
-The full technical report, including detailed workflow analysis and testing results, is available in the repository as pythonproject_merged (1)_removed.pdf
+The full technical report, including detailed workflow analysis and testing results, is available in the repository as multiclientchat.pdf
